@@ -8,7 +8,7 @@ include $(CLEAR_VARS)
 libmm-vdec-def := -D__alignx\(x\)=__attribute__\(\(__aligned__\(x\)\)\)
 libmm-vdec-def += -D__align=__alignx
 libmm-vdec-def += -Dinline=__inline
-libmm-vdec-def += -g -O3
+libmm-vdec-def += -g0 -O3
 libmm-vdec-def += -DIMAGE_APPS_PROC
 libmm-vdec-def += -D_ANDROID_
 libmm-vdec-def += -DCDECL
