@@ -80,19 +80,19 @@ include $(CLEAR_VARS)
 
 # Common Includes
 libmm-vdec-inc          := $(LOCAL_PATH)/inc
-libmm-vdec-inc          += $(TOP)/hardware/qcom/media-caf-msm8998/mm-video-v4l2/vidc/common/inc
-libmm-vdec-inc          += $(TOP)/hardware/qcom/media-caf-msm8998/mm-core/inc
-libmm-vdec-inc          += $(TARGET_OUT_HEADERS)/qcom/display-caf-msm8998
+libmm-vdec-inc          += $(TOP)/hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/mm-video-v4l2/vidc/common/inc
+libmm-vdec-inc          += $(TOP)/hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/mm-core/inc
+libmm-vdec-inc          += $(TARGET_OUT_HEADERS)/qcom/display-$(TARGET_QCOM_DISPLAY_VARIANT)
 libmm-vdec-inc          += $(TARGET_OUT_HEADERS)/adreno
-libmm-vdec-inc          += $(TOP)/hardware/qcom/media-caf-msm8998/libc2dcolorconvert
-libmm-vdec-inc          += $(TOP)/hardware/qcom/media-caf-msm8998/hypv-intercept
+libmm-vdec-inc          += $(TOP)/hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/libc2dcolorconvert
+libmm-vdec-inc          += $(TOP)/hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/hypv-intercept
 libmm-vdec-inc          += $(TARGET_OUT_HEADERS)/mm-video/SwVdec
 libmm-vdec-inc          += $(TARGET_OUT_HEADERS)/mm-video/swvdec
 libmm-vdec-inc          += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 
 ifeq ($(PLATFORM_SDK_VERSION), 18)  #JB_MR2
 libmm-vdec-def += -DANDROID_JELLYBEAN_MR2=1
-libmm-vdec-inc += $(TOP)/hardware/qcom/media-caf-msm8998/libstagefrighthw
+libmm-vdec-inc += $(TOP)/hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/libstagefrighthw
 endif
 
 # Common Dependencies
