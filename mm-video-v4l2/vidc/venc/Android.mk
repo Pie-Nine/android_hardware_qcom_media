@@ -55,9 +55,9 @@ endif
 
 # Common Includes
 libmm-venc-inc      := $(LOCAL_PATH)/inc
-libmm-venc-inc      += $(call project-path-for,qcom-media)/mm-video-v4l2/vidc/common/inc
-libmm-venc-inc      += $(call project-path-for,qcom-media)/mm-core/inc
-libmm-venc-inc      += $(call project-path-for,qcom-media)/libstagefrighthw
+libmm-venc-inc      += hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/mm-video-v4l2/vidc/common/inc
+libmm-venc-inc      += hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/mm-core/inc
+libmm-venc-inc      += hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/libstagefrighthw
 libmm-venc-inc      += $(TARGET_OUT_HEADERS)/qcom/display
 libmm-venc-inc      += $(TARGET_OUT_HEADERS)/adreno
 libmm-venc-inc      += frameworks/native/include/media/hardware
@@ -65,7 +65,7 @@ libmm-venc-inc      += frameworks/native/include/media/openmax
 libmm-venc-inc      += frameworks/native/libs/nativewindow/include/
 libmm-venc-inc      += frameworks/native/libs/arect/include/
 libmm-venc-inc      += frameworks/native/libs/nativebase/include
-libmm-venc-inc      += $(call project-path-for,qcom-media)/libc2dcolorconvert
+libmm-venc-inc      += hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/libc2dcolorconvert
 libmm-venc-inc      += frameworks/av/include/media/stagefright
 
 # ---------------------------------------------------------------------------------
