@@ -8,7 +8,7 @@ LOCAL_SRC_FILES := \
 LOCAL_C_INCLUDES := \
     $(TOP)/frameworks/av/include/media/stagefright \
     $(TOP)/frameworks/native/include/media/openmax \
-    $(TOP)/$(call project-path-for,qcom-display)/libcopybit
+    $(TOP)/hardware/qcom/display-$(TARGET_QCOM_DISPLAY_VARIANT)/libcopybit
 LOCAL_SHARED_LIBRARIES := liblog libdl
 
 LOCAL_HEADER_LIBRARIES := generated_kernel_headers

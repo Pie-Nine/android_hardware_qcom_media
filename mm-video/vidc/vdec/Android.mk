@@ -61,20 +61,20 @@ LOCAL_PATH:= $(ROOT_DIR)
 
 libmm-vdec-inc          := $(LOCAL_PATH)/inc
 libmm-vdec-inc          += $(OMX_VIDEO_PATH)/vidc/common/inc
-libmm-vdec-inc          += $(call project-path-for,qcom-media)/mm-core/inc
-libmm-vdec-inc          += $(call project-path-for,qcom-display)/libgralloc
+libmm-vdec-inc          += hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/mm-core/inc
+libmm-vdec-inc          += hardware/qcom/display-$(TARGET_QCOM_DISPLAY_VARIANT)/libgralloc
 libmm-vdec-inc          += frameworks/native/include/media/openmax
 libmm-vdec-inc          += frameworks/native/include/media/hardware
 libmm-vdec-inc          += frameworks/native/libs/nativewindow/include
 libmm-vdec-inc          += frameworks/native/libs/arect/include
 libmm-vdec-inc          += frameworks/native/libs/nativebase/include
-libmm-vdec-inc          += $(call project-path-for,qcom-media)/libc2dcolorconvert
-libmm-vdec-inc          += $(call project-path-for,qcom-display)/libcopybit
+libmm-vdec-inc          += hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/libc2dcolorconvert
+libmm-vdec-inc          += hardware/qcom/display-$(TARGET_QCOM_DISPLAY_VARIANT)/libcopybit
 libmm-vdec-inc          += frameworks/av/include/media/stagefright
-libmm-vdec-inc          += $(call project-path-for,qcom-display)/libqservice
+libmm-vdec-inc          += hardware/qcom/display-$(TARGET_QCOM_DISPLAY_VARIANT)/libqservice
 libmm-vdec-inc          += frameworks/av/media/libmediaplayerservice
 libmm-vdec-inc          += frameworks/native/include/binder
-libmm-vdec-inc          += $(call project-path-for,qcom-display)/libqdutils
+libmm-vdec-inc          += hardware/qcom/display-$(TARGET_QCOM_DISPLAY_VARIANT)/libqdutils
 
 LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 
@@ -108,7 +108,7 @@ include $(BUILD_SHARED_LIBRARY)
 # ---------------------------------------------------------------------------------
 include $(CLEAR_VARS)
 
-mm-vdec-test-inc    := $(call project-path-for,qcom-media)/mm-core/inc
+mm-vdec-test-inc    := hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/mm-core/inc
 mm-vdec-test-inc    += $(LOCAL_PATH)/inc
 
 LOCAL_HEADER_LIBRARIES := generated_kernel_headers
@@ -130,7 +130,7 @@ include $(BUILD_EXECUTABLE)
 # ---------------------------------------------------------------------------------
 include $(CLEAR_VARS)
 
-mm-vdec-drv-test-inc    := $(call project-path-for,qcom-media)/mm-core/inc
+mm-vdec-drv-test-inc    := hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/mm-core/inc
 mm-vdec-drv-test-inc    += $(LOCAL_PATH)/inc
 
 LOCAL_HEADER_LIBRARIES := generated_kernel_headers
